@@ -1,6 +1,9 @@
 #!/bin/bash
 
 # bash_profile
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+chruby ruby-2.0.0-p353
 
 # set 256 color profile where possible
 if [[ $COLORTERM == gnome-* && $TERM == xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
@@ -17,14 +20,11 @@ fi
 
 load_dotfiles() {
     declare -a files=(
-        $HOME/.rvm/scripts/rvm # Load RVM into a shell session *as a function*
         $HOME/.dotfiles/shell/bash_options # Options
-        $HOME/.dotfiles/shell/bash_exports # Exports
+		$HOME/.dotfiles/shell/bash_exports # Exports
         $HOME/.dotfiles/shell/bash_aliases # Aliases
         $HOME/.dotfiles/shell/functions/* # Functions
         $HOME/.dotfiles/shell/bash_prompt # Custom bash prompt
-        $HOME/.dotfiles/shell/bash_paths # Path modifications
-        $(brew --prefix)/etc/bash_completion # Bash completion (installed via Homebrew)
         $HOME/.bash_profile.local # Local and private settings not under version control (e.g. git credentials)
     )
 
