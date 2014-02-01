@@ -7,13 +7,13 @@
 # ----------------------------------------------------------------------
 
 # Disable Menu bar transparency
-defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
+defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool true
 
 # Enable snap-to-grid for desktop icons
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
 # Always show scrollbars
-defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+defaults write NSGlobalDomain AppleShowScrollBars -string "Automatic"
 
 # Save to disk (not to iCloud) by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
@@ -28,7 +28,7 @@ defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
 # Disable press-and-hold for keys in favor of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool true
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
@@ -46,22 +46,22 @@ defaults write com.apple.dock mru-spaces -bool false
 # ----------------------------------------------------------------------
 
 # Dock: enable the 2D Dock
-defaults write com.apple.dock no-glass -bool true
+defaults write com.apple.dock no-glass -bool false
 
 # Dock: position the Dock on the left
-defaults write com.apple.dock orientation left
+defaults write com.apple.dock orientation bottom
 
 # Dock: set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 36
+# defaults write com.apple.dock tilesize -int 36
 
 # Dock: show indicator lights for open applications
 defaults write com.apple.dock show-process-indicators -bool true
 
 # Dock: make icons of hidden applications translucent
-defaults write com.apple.dock showhidden -bool true
+defaults write com.apple.dock showhidden -bool false
 
 # Dock: don’t animate opening applications
-defaults write com.apple.dock launchanim -bool false
+defaults write com.apple.dock launchanim -bool true
 
 # Dock: use the scale effect for window minimizing
 defaults write com.apple.dock mineffect scale
@@ -74,7 +74,7 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 # ----------------------------------------------------------------------
 
 # Finder: show all filename extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+defaults write NSGlobalDomain AppleShowAllExtensions -bool false
 
 # Finder: disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
@@ -83,16 +83,16 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write com.apple.finder EmptyTrashSecurely -bool true
 
 # Finder: disable window and Get Info animations
-defaults write com.apple.finder DisableAllAnimations -bool true
+defaults write com.apple.finder DisableAllAnimations -bool false
 
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
-defaults write com.apple.finder QuitMenuItem -bool true
+defaults write com.apple.finder QuitMenuItem -bool false
 
 # Finder: show the ~/Library folder (in OS X Lion)
 chflags nohidden ~/Library
 
 # Finder: show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool false
 
 # Finder: use list view in all windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
@@ -132,7 +132,7 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 defaults write com.apple.screencapture location -string "$HOME/Desktop"
 
 # Screen: disable shadow in screenshots
-defaults write com.apple.screencapture disable-shadow -bool true
+defaults write com.apple.screencapture disable-shadow -bool false
 
 # Screen: enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2

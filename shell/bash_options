@@ -13,4 +13,4 @@ shopt -s checkwinsize
 shopt -s histappend
 
 # Case-insensitive globbing (used in pathname expansion)
-shopt -s nocaseglob
+# shopt -s nocaseglob

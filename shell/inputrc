@@ -3,7 +3,7 @@
 # inputrc
 
 # Use case-insensitive TAB autocompletion
-set completion-ignore-case on
+set completion-ignore-case off
 
 # Auto list tab completions (use instead of TAB-cycling)
 set show-all-if-ambiguous on
