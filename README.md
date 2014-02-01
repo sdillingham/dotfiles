@@ -1,7 +1,8 @@
-# Dotfiles (Nicolas Gallagher)
+# Dotfiles
 
 My OS X dotfiles.
 
+Forked from Nicolas Gallagher.
 
 ## How to install
 
