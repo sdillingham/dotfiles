@@ -157,9 +157,6 @@ following way:
 
 Further details are in the `bash_prompt` file.
 
-Screenshot:
-
-![](http://i.imgur.com/DSJ1G.png)
 
 ### Local/private Bash and Vim configuration
 
